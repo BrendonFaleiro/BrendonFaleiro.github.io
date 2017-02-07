@@ -4,15 +4,15 @@ body {
 }
 header{
 	background-image: url('../images/blue-surface-with-creases_1160-191.jpg');
-	background-repeat: no-repeat;
 	background-attachment: scroll;
-	background-position: center center;
+	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
 	text-align: center;
 	color: white;
+    width:100%;
 }
 header .intro-text{
 	position: relative;
@@ -40,6 +40,9 @@ header .intro-text a{
 
 /*Large Screen Intro-Text*/
 @media (min-width: 768px) {
+.container{
+    width: 100%;
+}
 header .intro-text{
 	font-size: 30px;
 	margin-bottom: 100px;
@@ -307,6 +310,38 @@ span.copyright{
 .timeline .timeline-body > p,
 .timeline .timeline-body > ul {
   margin-bottom: 0;
+}
+
+@media (min-width: 400px){
+   .timeline:before {
+    left: -17%;
+  }
+  .timeline > li {
+    margin-bottom: 100px;
+    min-height: 100px;
+  }
+  .timeline > li .timeline-panel {
+    width: 170%;
+    float: left;
+    padding: 0 10px 20px 30px;
+    text-align: left;
+  }
+  .timeline > li .timeline-image {
+    width: 100px;
+    height: 100px;
+    left: -5%;
+    margin-left: -70px;
+  }
+  .timeline > li .timeline-image h4 {
+    font-size: 13px;
+    margin-top: 30px;
+    line-height: 18px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: left;
+    text-align: left;
+    padding: 0 10px 20px 30px;
+  } 
 }
 @media (min-width: 768px) {
   .timeline:before {
