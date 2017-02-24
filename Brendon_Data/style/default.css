@@ -216,34 +216,27 @@ span.copyright{
     padding: 20px;
     text-align: center;
 }
+
+/*Timeline*/
+
 .timeline{
     list-style: none;
     padding: 0;
     position: relative;
-}
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: "";
-  width: 2px;
-  background-color: #f1f1f1;
-  left: 40px;
-  margin-left: -1.5px;
 }
 .timeline > li {
   margin-bottom: 50px;
   position: relative;
   min-height: 50px;
 }
+
 .timeline > li:before,
 .timeline > li:after {
   content: " ";
   display: table;
-}
-.timeline > li:after {
   clear: both;
-}
+  }
+
 .timeline > li .timeline-panel {
   width: 100%;
   float: right;
@@ -251,18 +244,8 @@ span.copyright{
   position: relative;
   text-align: left;
 }
-.timeline > li .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-.timeline > li .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
+
+
 .timeline > li .timeline-image {
   left: 0;
   margin-left: 0;
@@ -311,11 +294,56 @@ span.copyright{
 .timeline .timeline-body > ul {
   margin-bottom: 0;
 }
-
-@media (min-width: 400px){
-   .timeline:before {
-    left: -17%;
+@media (max-width:399px){
+.timeline > li .timeline-panel {
+  text-align: left;
+  left: -1em;
   }
+.timeline > li .timeline-image {
+  left: -80;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  text-align: left;
+  left: -1em;
+}
+.timeline .timeline-body > p,
+.timeline .timeline-body > ul {
+  margin-bottom: 0;
+  width:120px;
+  
+}
+.timeline > li:last-child {
+  margin-top: 20px;
+}
+
+    
+}
+@media (min-width: 400px){
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 2px;
+  background-color: #f1f1f1;
+  left: -1.7em;
+  margin-left: -1.5px;
+}
+.timeline > li .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  right: auto;
+}
+.timeline > li .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li:after {
+  clear: both;
+}
+
   .timeline > li {
     margin-bottom: 100px;
     min-height: 100px;
